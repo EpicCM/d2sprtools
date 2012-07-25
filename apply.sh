@@ -59,40 +59,16 @@ set -e
 
 ################ Apply Patches Below ####################
 
-repo start auto external/skia
-cdv external/skia
-echo "Change I0fae80b1: Neon optimized implementation of S16_opaque_D32_nofilter_DX"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_external_skia refs/changes/72/19672/1 && git cherry-pick FETCH_HEAD
-cdb
-
-repo start auto packages/apps/Camera
-cdv packages/apps/Camera
-echo "Change I92cd6aa1: camera: Fix ZSL and resolution change lockups"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_packages_apps_Camera refs/changes/69/19669/1 && git cherry-pick FETCH_HEAD
-cdb
-
 repo start auto hardware/qcom/media
 cdv hardware/qcom/media
 echo "Change I66033d37: libI420colorconvert: Add new library for MovieStudio color conversions"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_hardware_qcom_media refs/changes/61/19661/1 && git cherry-pick FETCH_HEAD
 cdb
 
-repo start auto bionic
-cdv bionic
-echo "Change I9234d37e: Bionic/libm: fast neon pow() for small x,y"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_bionic refs/changes/59/19659/1 && git cherry-pick FETCH_HEAD
-cdb
-
 repo start auto frameworks/base
 cdv frameworks/base
 echo "Change Icb4b9b71: frameworks/base: Fix screen stretch issue for NuPlayer"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/58/19658/1 && git cherry-pick FETCH_HEAD
-cdb
-
-repo start auto frameworks/base
-cdv frameworks/base
-echo "Change Ib8dfa315: Adjust kernel data stack TCP parameters to optimize performance"
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/57/19657/1 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto hardware/qcom/media
