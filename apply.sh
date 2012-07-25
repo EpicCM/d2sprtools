@@ -148,6 +148,12 @@ echo "Change I7e7f4404: audio: Temporary workaround for missing QCOM LPA"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_av refs/changes/20/19120/2 && git cherry-pick FETCH_HEAD
 cdb
 
+repo start auto frameworks/base
+cdv frameworks/base
+echo "SamsungCDMAQCRIL: Clean up and fix the lies"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/51/19951/7 && git cherry-pick FETCH_HEAD
+cdb
+
 ##### SUCCESS ####
 SUCCESS=true
 exit 0
