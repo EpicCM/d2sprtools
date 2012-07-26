@@ -109,7 +109,7 @@ cdb
 
 repo start auto frameworks/av
 cdv frameworks/av
-git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_av refs/changes/11/19411/5 && git cherry-pick FETCH_HEAD
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_av refs/changes/11/19411/7 && git cherry-pick FETCH_HEAD
 cdb
 
 repo start auto frameworks/native
@@ -154,6 +154,11 @@ echo "SamsungCDMAQCRIL: Clean up and fix the lies"
 git fetch http://review.cyanogenmod.com/CyanogenMod/android_frameworks_base refs/changes/51/19951/7 && git cherry-pick FETCH_HEAD
 cdb
 
+repo start auto external/skia
+cdv external/skia
+echo "Change Id6dc41d7: Assembly optimized 4 blittering related functions"
+git fetch http://review.cyanogenmod.com/CyanogenMod/android_external_skia refs/changes/18/20118/1 && git cherry-pick FETCH_HEAD
+cdb
 ##### SUCCESS ####
 SUCCESS=true
 exit 0
